@@ -18,7 +18,7 @@ public class Person {
 
     public Person(String name) {
         this.name = name;
-        friends = new ArrayList<>();
+        friends = new ArrayList<String>();
     }
 
     public List<String> getFriends() {

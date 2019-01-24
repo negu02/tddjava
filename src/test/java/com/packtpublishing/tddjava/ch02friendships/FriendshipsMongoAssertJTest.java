@@ -17,7 +17,7 @@ import static org.mockito.Mockito.*;
 public class FriendshipsMongoAssertJTest {
 
     @InjectMocks
-    FriendshipsMongo friendships;
+    FriendshipsMongo friendships = new FriendshipsMongo();
 
     @Mock
     FriendsCollection friends;
