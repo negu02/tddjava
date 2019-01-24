@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 public class Friendships {
-    private final Map<String, List<String>> friendships = new HashMap<>();
+    private final Map<String, List<String>> friendships = new HashMap<String, List<String>>();
 
     public void makeFriends(String person1, String person2) {
         addFriend(person1, person2);
