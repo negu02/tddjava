@@ -25,6 +25,17 @@ public class FriendshipsAssertJTest {
     }
 
     @Test
+    public void michaelHasOneFriend(){
+    	assertThat(friendships.getFriendsList("Michael").contains("Joe") &&
+    			friendships.getFriendsList("Michael").size() == 1);
+    }
+    
+    @Test
+    public void paulIsNotBrineyFriend(){
+    	assertThat(!friendships.getFriendsList("Paul").contains("Britney"));
+    }
+    
+    @Test
     public void joeHas5Friends() {
         assertThat(friendships.getFriendsList("Joe"))
                 .hasSize(5)
