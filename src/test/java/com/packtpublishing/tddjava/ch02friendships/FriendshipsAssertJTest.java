@@ -2,6 +2,10 @@ package com.packtpublishing.tddjava.ch02friendships;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.util.List;
+
+import org.assertj.core.util.Arrays;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -37,9 +41,15 @@ public class FriendshipsAssertJTest {
     
     @Test
     public void joeHas5Friends() {
-        assertThat(friendships.getFriendsList("Joe"))
-                .hasSize(5)
-                .containsOnly("Audrey", "Peter", "Michael", "Britney", "Paul");
+    	Assert.assertSame("Joe has 5 friends.", 5, friendships.getFriendsList("Joe").size());
+    }
+    
+    @Test
+    public void joeIsEveryOnesFriend(){
+    	String personas[] = new String[]{"Audrey","Peter","Michael","Britney", "Paul"};
+    	List<Object> joesFriends = Arrays.asList(personas);
+    	Assert.assertTrue(friendships.getFriendsList("Joe")
+    			.containsAll(joesFriends));
     }
 
 }
