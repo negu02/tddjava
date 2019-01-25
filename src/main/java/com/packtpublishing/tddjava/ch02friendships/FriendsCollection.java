@@ -11,7 +11,8 @@ import com.mongodb.MongoClient;
 public class FriendsCollection {
     private MongoCollection friends;
 
-    public FriendsCollection() throws UnknownHostException {
+    @SuppressWarnings({ "deprecation", "resource" })
+	public FriendsCollection() throws UnknownHostException {
         DB db = new MongoClient().getDB("friendships");
 		friends = new Jongo(db).getCollection("friends");
     }

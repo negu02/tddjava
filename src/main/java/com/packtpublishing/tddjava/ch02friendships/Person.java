@@ -9,7 +9,7 @@ import java.util.List;
  * This class holds person declaration and the list of friends
  */
 public class Person {
-    @Id
+	@Id
     private String name;
 
     private List<String> friends;
